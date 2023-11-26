@@ -75,7 +75,7 @@ body {
     repeat: no-repeat;
     position: top center;
   }
-  padding: 38px 35px 40px;
+  padding: 38px 35px 12.5px;
   @media (min-width: 751px) {
     background: {
       image: url("../images/bg-desktop.svg");
@@ -84,7 +84,7 @@ body {
     }
   }
   @media (min-width: $breakpoint) {
-    padding: 64px 85px 40px 80px;
+    padding: 64px 85px 12.5px 80px;
   }
 }
 
@@ -146,7 +146,6 @@ img {
   max-width: 600px;
   @media (min-width: $breakpoint) {
     padding-top: 32px;
-    /* width: 520px; */
     flex: 0 1 520px;
   }
 }
@@ -239,8 +238,9 @@ img {
 .attribution {
   font-size: 11px;
   text-align: center;
+  margin-top: 1em;
 }
 
 .attribution a {
-  color: hsl(228, 45%, 44%);
+  color: var(--link-color);
 }

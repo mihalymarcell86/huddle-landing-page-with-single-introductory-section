@@ -81,7 +81,7 @@ body {
   background-size: contain;
   background-repeat: no-repeat;
   background-position: top center;
-  padding: 2.375rem 2.1875rem 2.5rem;
+  padding: 2.375rem 2.1875rem 0.78125rem;
 }
 @media (min-width: 751px) {
   body {
@@ -92,7 +92,7 @@ body {
 }
 @media (min-width: 1000px) {
   body {
-    padding: 4rem 5.3125rem 2.5rem 5rem;
+    padding: 4rem 5.3125rem 0.78125rem 5rem;
   }
 }
 
@@ -163,7 +163,6 @@ img {
 @media (min-width: 1000px) {
   .main-content {
     padding-top: 2rem;
-    /* width: 520px; */
     flex: 0 1 32.5rem;
   }
 }
@@ -272,8 +271,10 @@ img {
 .attribution {
   font-size: 0.6875rem;
   text-align: center;
+  margin-top: 1em;
 }
 
 .attribution a {
-  color: hsl(228, 45%, 44%);
+  color: hsl(0, 0%, 100%);
+  color: var(--link-color);
 }
