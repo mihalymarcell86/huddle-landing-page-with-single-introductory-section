@@ -13,7 +13,7 @@
   --button-hover-bg-color: hsl(300, 69%, 71%);
   --button-hover-text-color: hsl(0, 0%, 100%);
   --link-color: hsl(0, 0%, 100%);
-  --link-hover-color: hsl(300, 69%, 71%);
+  --link-hover-color: hsl(322, 100%, 66%);
 }
 
 /* Typography */
@@ -23,7 +23,7 @@ body {
   line-height: 1.5;
   text-align: center;
 }
-@media (min-width: 1440px) {
+@media (min-width: 1000px) {
   body {
     text-align: left;
   }
@@ -37,7 +37,7 @@ button {
 h1 {
   font-size: 1.5rem;
 }
-@media (min-width: 1440px) {
+@media (min-width: 1000px) {
   h1 {
     font-size: 2.5rem;
   }
@@ -47,7 +47,7 @@ p {
   font-family: "Open Sans", sans-serif;
   font-size: 1rem;
 }
-@media (min-width: 1440px) {
+@media (min-width: 1000px) {
   p {
     font-size: 1.125rem;
   }
@@ -69,7 +69,7 @@ a:any-link {
   color: var(--link-color);
 }
 a:hover {
-  color: hsl(300, 69%, 71%);
+  color: hsl(322, 100%, 66%);
   color: var(--link-hover-color);
 }
 
@@ -83,10 +83,15 @@ body {
   background-position: top center;
   padding: 2.375rem 2.1875rem 2.5rem;
 }
-@media (min-width: 1440px) {
+@media (min-width: 751px) {
   body {
     background-image: url("../images/bg-desktop.svg");
-    background-size: cover;
+    background-position: left center;
+    background-size: auto;
+  }
+}
+@media (min-width: 1000px) {
+  body {
     padding: 4rem 5.3125rem 2.5rem 5rem;
   }
 }
@@ -101,7 +106,7 @@ img {
   margin-left: 0.3125rem;
   font-size: 0;
 }
-@media (min-width: 1440px) {
+@media (min-width: 1000px) {
   .header {
     margin-left: 0;
     margin-bottom: 6.5rem;
@@ -111,7 +116,7 @@ img {
 .header-logo {
   width: 7.5rem;
 }
-@media (min-width: 1440px) {
+@media (min-width: 1000px) {
   .header-logo {
     width: 12.5rem;
   }
@@ -120,31 +125,46 @@ img {
 .main {
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 3.75rem;
   margin-bottom: 4rem;
 }
-@media (min-width: 1440px) {
+@media (min-width: 1000px) {
   .main {
     flex-direction: row;
+    align-items: flex-start;
     gap: 3.6875rem;
     margin-bottom: 1.6875rem;
   }
 }
 
-.main-hero-img {
-  width: 18.5rem;
-  margin-left: 0.3125rem;
-  margin-right: 0.3125rem;
+.main-img-container {
+  padding-left: 0.3125rem;
+  padding-right: 0.3125rem;
+  width: 100%;
+  max-width: 23.75rem;
 }
-@media (min-width: 1440px) {
-  .main-hero-img {
-    flex: 1 0 43.5rem;
+@media (min-width: 1000px) {
+  .main-img-container {
+    padding: 0;
+    max-width: 43.5rem;
+    flex-shrink: 2;
+    align-self: center;
   }
 }
 
-@media (min-width: 1440px) {
+.main-hero-img {
+  width: 100%;
+}
+
+.main-content {
+  max-width: 37.5rem;
+}
+@media (min-width: 1000px) {
   .main-content {
     padding-top: 2rem;
+    /* width: 520px; */
+    flex: 0 1 32.5rem;
   }
 }
 
@@ -153,7 +173,7 @@ img {
   margin-right: 0.75rem;
   margin-bottom: 1rem;
 }
-@media (min-width: 1440px) {
+@media (min-width: 1000px) {
   .main-heading {
     margin-left: 0;
     margin-right: 0;
@@ -185,7 +205,7 @@ img {
   color: hsl(0, 0%, 100%);
   color: var(--button-hover-text-color);
 }
-@media (min-width: 1440px) {
+@media (min-width: 1000px) {
   .main-button {
     font-size: 1.125rem;
     border-radius: 1.75rem;
@@ -208,14 +228,15 @@ img {
   align-items: center;
   justify-content: center;
 }
-@media (min-width: 1440px) {
+@media (min-width: 1000px) {
   .footer-social a {
     width: 2.5rem;
   }
 }
-@media (min-width: 1440px) {
+@media (min-width: 1000px) {
   .footer-social {
     gap: 1rem;
+    justify-content: flex-end;
   }
 }
 
@@ -223,7 +244,7 @@ img {
   width: 0.38169rem;
   height: 0.83125rem;
 }
-@media (min-width: 1440px) {
+@media (min-width: 1000px) {
   .social-fb {
     width: 0.5625rem;
     height: 1.1875rem;
@@ -233,7 +254,7 @@ img {
 .social-twitter {
   width: 0.8125rem;
 }
-@media (min-width: 1440px) {
+@media (min-width: 1000px) {
   .social-twitter {
     width: 1.125rem;
   }
@@ -242,7 +263,7 @@ img {
 .social-insta {
   width: 0.8125rem;
 }
-@media (min-width: 1440px) {
+@media (min-width: 1000px) {
   .social-insta {
     width: 1.1875rem;
   }

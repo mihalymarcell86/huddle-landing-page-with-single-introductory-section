@@ -4,13 +4,14 @@
   padding: 0;
 }
 
-$breakpoint: 1440px;
+$breakpoint: 1000px;
 
 /* Colors */
 
 $violet: hsl(257, 40%, 49%);
 $soft-magenta: hsl(300, 69%, 71%);
 $white: hsl(0, 0%, 100%);
+$lavender-magenta: hsl(322, 100%, 66%);
 
 :root {
   --bg-color: #{$violet};
@@ -20,7 +21,7 @@ $white: hsl(0, 0%, 100%);
   --button-hover-bg-color: #{$soft-magenta};
   --button-hover-text-color: #{$white};
   --link-color: #{$white};
-  --link-hover-color: #{$soft-magenta};
+  --link-hover-color: #{$lavender-magenta};
 }
 
 /* Typography */
@@ -75,9 +76,14 @@ body {
     position: top center;
   }
   padding: 38px 35px 40px;
+  @media (min-width: 751px) {
+    background: {
+      image: url("../images/bg-desktop.svg");
+      position: left center;
+      size: auto;
+    }
+  }
   @media (min-width: $breakpoint) {
-    background-image: url("../images/bg-desktop.svg");
-    background-size: cover;
     padding: 64px 85px 40px 80px;
   }
 }
@@ -109,26 +115,39 @@ img {
 .main {
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 60px;
   margin-bottom: 64px;
   @media (min-width: $breakpoint) {
     flex-direction: row;
+    align-items: flex-start;
     gap: 59px;
     margin-bottom: 27px;
   }
 }
 
-.main-hero-img {
-  width: 296px;
-  margin-inline: 5px;
+.main-img-container {
+  padding-inline: 5px;
+  width: 100%;
+  max-width: 380px;
   @media (min-width: $breakpoint) {
-    flex: 1 0 696px;
+    padding: 0;
+    max-width: 696px;
+    flex-shrink: 2;
+    align-self: center;
   }
 }
 
+.main-hero-img {
+  width: 100%;
+}
+
 .main-content {
+  max-width: 600px;
   @media (min-width: $breakpoint) {
     padding-top: 32px;
+    /* width: 520px; */
+    flex: 0 1 520px;
   }
 }
 
@@ -190,6 +209,7 @@ img {
   }
   @media (min-width: $breakpoint) {
     gap: 16px;
+    justify-content: flex-end;
   }
 }
 
