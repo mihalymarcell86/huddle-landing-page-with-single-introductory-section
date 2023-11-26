@@ -4,6 +4,8 @@
   padding: 0;
 }
 
+$breakpoint: 1440px;
+
 /* Colors */
 
 $violet: hsl(257, 40%, 49%);
@@ -27,6 +29,9 @@ body {
   color: var(--text-color);
   line-height: 1.5;
   text-align: center;
+  @media (min-width: $breakpoint) {
+    text-align: left;
+  }
 }
 
 h1,
@@ -36,14 +41,21 @@ button {
 
 h1 {
   font-size: 24px;
+  @media (min-width: $breakpoint) {
+    font-size: 40px;
+  }
 }
 
 p {
   font-family: "Open Sans", sans-serif;
-  font-size: 12px;
+  font-size: 16px;
+  @media (min-width: $breakpoint) {
+    font-size: 18px;
+  }
 }
 
 a {
+  transition: color 0.2s ease;
   &:any-link {
     color: var(--link-color);
   }
@@ -63,6 +75,11 @@ body {
     position: top center;
   }
   padding: 38px 35px 40px;
+  @media (min-width: $breakpoint) {
+    background-image: url("../images/bg-desktop.svg");
+    background-size: cover;
+    padding: 64px 85px 40px 80px;
+  }
 }
 
 img {
@@ -74,10 +91,19 @@ img {
   text-align: left;
   margin-left: 5px;
   font-size: 0;
+  @media (min-width: $breakpoint) {
+    margin: {
+      left: 0;
+      bottom: 104px;
+    }
+  }
 }
 
 .header-logo {
   width: 120px;
+  @media (min-width: $breakpoint) {
+    width: 200px;
+  }
 }
 
 .main {
@@ -85,13 +111,24 @@ img {
   flex-direction: column;
   gap: 60px;
   margin-bottom: 64px;
+  @media (min-width: $breakpoint) {
+    flex-direction: row;
+    gap: 59px;
+    margin-bottom: 27px;
+  }
 }
 
 .main-hero-img {
   width: 296px;
-  height: 209px;
-  margin: {
-    inline: 5px;
+  margin-inline: 5px;
+  @media (min-width: $breakpoint) {
+    flex: 1 0 696px;
+  }
+}
+
+.main-content {
+  @media (min-width: $breakpoint) {
+    padding-top: 32px;
   }
 }
 
@@ -100,10 +137,15 @@ img {
     inline: 12px;
     bottom: 16px;
   }
+  @media (min-width: $breakpoint) {
+    margin: {
+      inline: 0;
+      bottom: 24px;
+    }
+  }
 }
 
 .main-paragraph {
-  font-size: 16px;
   margin-bottom: 24px;
 }
 
@@ -122,6 +164,12 @@ img {
     background-color: var(--button-hover-bg-color);
     color: var(--button-hover-text-color);
   }
+  @media (min-width: $breakpoint) {
+    font-size: 18px;
+    border-radius: 28px;
+    padding: 14px 64px;
+    box-shadow: 2px 4px 9px 3px rgba(0, 0, 0, 0.26);
+  }
 }
 
 .footer-social {
@@ -136,21 +184,36 @@ img {
     aspect-ratio: 1 / 1;
     align-items: center;
     justify-content: center;
+    @media (min-width: $breakpoint) {
+      width: 40px;
+    }
+  }
+  @media (min-width: $breakpoint) {
+    gap: 16px;
   }
 }
 
 .social-fb {
   width: 6.107px;
   height: 13.3px;
+  @media (min-width: $breakpoint) {
+    width: 9px;
+    height: 19px;
+  }
 }
 
 .social-twitter {
   width: 13px;
-  heiht: 11px;
+  @media (min-width: $breakpoint) {
+    width: 18px;
+  }
 }
 
 .social-insta {
   width: 13px;
+  @media (min-width: $breakpoint) {
+    width: 19px;
+  }
 }
 
 .attribution {
