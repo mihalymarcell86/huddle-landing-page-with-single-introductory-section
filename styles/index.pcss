@@ -1,0 +1,163 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Colors */
+
+$violet: hsl(257, 40%, 49%);
+$soft-magenta: hsl(300, 69%, 71%);
+$white: hsl(0, 0%, 100%);
+
+:root {
+  --bg-color: #{$violet};
+  --text-color: #{$white};
+  --button-bg-color: #{$white};
+  --button-text-color: #{$violet};
+  --button-hover-bg-color: #{$soft-magenta};
+  --button-hover-text-color: #{$white};
+  --link-color: #{$white};
+  --link-hover-color: #{$soft-magenta};
+}
+
+/* Typography */
+
+body {
+  color: var(--text-color);
+  line-height: 1.5;
+  text-align: center;
+}
+
+h1,
+button {
+  font-family: "Poppins", sans-serif;
+}
+
+h1 {
+  font-size: 24px;
+}
+
+p {
+  font-family: "Open Sans", sans-serif;
+  font-size: 12px;
+}
+
+a {
+  &:any-link {
+    color: var(--link-color);
+  }
+  &:hover {
+    color: var(--link-hover-color);
+  }
+}
+
+/* Page styles */
+
+body {
+  background: {
+    color: var(--bg-color);
+    image: url("../images/bg-mobile.svg");
+    size: contain;
+    repeat: no-repeat;
+    position: top center;
+  }
+  padding: 38px 35px 40px;
+}
+
+img {
+  max-width: 100%;
+}
+
+.header {
+  margin-bottom: 70px;
+  text-align: left;
+  margin-left: 5px;
+  font-size: 0;
+}
+
+.header-logo {
+  width: 120px;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  margin-bottom: 64px;
+}
+
+.main-hero-img {
+  width: 296px;
+  height: 209px;
+  margin: {
+    inline: 5px;
+  }
+}
+
+.main-heading {
+  margin: {
+    inline: 12px;
+    bottom: 16px;
+  }
+}
+
+.main-paragraph {
+  font-size: 16px;
+  margin-bottom: 24px;
+}
+
+.main-button {
+  background-color: var(--button-bg-color);
+  color: var(--button-text-color);
+  font-size: 12px;
+  line-height: 1.5;
+  padding: 11px 75px;
+  border: 0;
+  border-radius: 20px;
+  box-shadow: 1px 3px 5px 0px rgba(0, 0, 0, 0.27);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  &:hover {
+    background-color: var(--button-hover-bg-color);
+    color: var(--button-hover-text-color);
+  }
+}
+
+.footer-social {
+  display: flex;
+  gap: 11px;
+  justify-content: center;
+  a {
+    display: flex;
+    border: 1px solid currentColor;
+    border-radius: 50%;
+    width: 28px;
+    aspect-ratio: 1 / 1;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.social-fb {
+  width: 6.107px;
+  height: 13.3px;
+}
+
+.social-twitter {
+  width: 13px;
+  heiht: 11px;
+}
+
+.social-insta {
+  width: 13px;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
